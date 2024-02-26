@@ -5,23 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <script>
+    <script>
         tailwind.config = {
             theme: {
+                colors: {
+                        gradientStart: '#2a0845',
+                        gradientEnd: '#6441A5',
+                        h1: '#f8f8f8',
+                        textColor: '#BE93E4',
+                        inputBackgoundColor: '#CCCCCC',
+                        buttonColorStart: '#f5cc51',
+                        buttonMiddleColor: '#f5ae25',
+                        buttonColorEnd: '#fe8b48',
+                        buttonText:'#333333',
+                        paragraphNoteText: '#B6B5D8',
+                        inputBackground: '#775e9b',
+                        inputText: '#f8f8f8',
+                        inputActive: '#B768A2',
+                    },
+                fontFamily: {
+                    text: ['Poppins', 'Helvetica'],
+                    'sans-serif': ['Montserrat', 'serif']
+                },
                 extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
+                },
             }
         }
-    </script> -->
+    </script>
+    <script src="https://kit.fontawesome.com/48f150aa54.js" crossorigin="anonymous" defer></script>
     <title>Palindrome Checker</title>
 </head>
 
-<body>
-    <main>
-        <h1 class="text-5xl text-lime-500 font-bold underline">Palindrome Checker</h1>
+<body class="bg-gradient-to-br from-gradientStart to-gradientEnd w-screen h-screen flex items-center justify-center">
+    <main class="w-4/5 h-3/4 flex flex-col justify-start sm:max-w-lg">
+        <section class="flex text-center justify-center mt-8">
+            <h1 class="text-4xl text-h1 w-max h-max font-extrabold font-sans-serif">Palindrome Checker</h1>
+        </section>
+        <section class="mt-16 flex flex-col items-center">
+            <p class="font-sans text-center text-textColor">Enter in text to check for a palindrome:</p>
+            <input id="text-input" type="text" class="mt-4 w-4/5 h-8 text-inputText bg-inputBackground rounded-lg valid:outline-none focus:border-inputActive focus:border-b-2"/>
+            <button id="check-btn" class="mt-6 w-28 h-10 bg-gradient-to-bl from-buttonColorStart from-0% via-buttonMiddleColor via-20% to-buttonColorEnd to-90% rounded-xl text-buttonText font-bold font-sans-serif">Check</button>
+        </section>
+        <section class="mt-16 text-paragraphNoteText flex flex-col items-center text-center">
+            <i class="fa-regular fa-lightbulb text-buttonMiddleColor mb-1"></i>
+            <p class="font-sans">A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.</p>
+        </section>
     </main>
 </body>
 
