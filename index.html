@@ -33,6 +33,7 @@
         }
     </script>
     <script src="https://kit.fontawesome.com/48f150aa54.js" crossorigin="anonymous" defer></script>
+    <script src="./script.js" defer></script>
     <title>Palindrome Checker</title>
 </head>
 
@@ -45,6 +46,11 @@
             <p class="font-sans text-center text-textColor">Enter in text to check for a palindrome:</p>
             <input id="text-input" type="text" class="mt-4 w-4/5 h-8 text-inputText bg-inputBackground rounded-lg valid:outline-none focus:border-inputActive focus:border-b-2"/>
             <button id="check-btn" class="mt-6 w-28 h-10 bg-gradient-to-bl from-buttonColorStart from-0% via-buttonMiddleColor via-20% to-buttonColorEnd to-90% rounded-xl text-buttonText font-bold font-sans-serif">Check</button>
+        </section>
+        <section class="hidden justify-center mt-10">
+            <div id="result" class="flex items-center justify-center border-2 w-4/5 max-w-lg rounded-lg min-h-16 max-h-fit ">
+                <p class="text-center text-">This is result div. Should be hidden by default.</p>
+            </div>
         </section>
         <section class="mt-16 text-paragraphNoteText flex flex-col items-center text-center">
             <i class="fa-regular fa-lightbulb text-buttonMiddleColor mb-1"></i>
